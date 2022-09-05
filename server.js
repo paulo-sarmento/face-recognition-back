@@ -9,7 +9,7 @@ const db = Knex({
   client: 'pg',
   connection: {
     host : '127.0.0.1',
-    port : 5432,
+    port : process.env.port || 5432,
     user : 'postgres',
     password : '19621017',
     database : 'smart-brain'
@@ -112,5 +112,5 @@ app.put("/image", (req, res) => {
 })
 
 app.listen(3000, () => {
-  console.log("server is running on port 3000")
+  console.log(`server is running on port ${process.env.port}`)
 });

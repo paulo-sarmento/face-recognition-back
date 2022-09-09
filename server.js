@@ -8,7 +8,7 @@ import Clarifai from 'clarifai';
 const db = Knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-animated-28468',
     port : process.env.port || 5432,
     user : 'postgres',
     password : '19621017',

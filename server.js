@@ -20,7 +20,7 @@ app.use(BodyParser.json());
 app.use(Cors());
 
 const ClarifaiApp = new Clarifai.App({
-  apiKey: '6bfd33d11aa34009a398e71e8533757f'
+  apiKey: process.env.API_CLARIFAI
 });
 
 app.get("/", (req, res) => {
